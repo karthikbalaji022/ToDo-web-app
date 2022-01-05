@@ -1,0 +1,259 @@
+*{
+    margin:0;
+    border:0;
+    padding:0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    height:100%;
+    width:100vw;
+    background-color: rgb(207, 241, 210);
+    color:white;
+    position: relative;
+    overflow-x: hidden;
+    background-image: url('../img/img1.jpg');
+    background-repeat: none;
+    background-size: cover;
+    filter:drop-shadow(20);
+    -webkit-filter:drop-shadow(20);
+}
+.head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    -webkit-border-radius:30px;
+    -moz-border-radius:30px;
+    -ms-border-radius:30px;
+    -o-border-radius:30px;
+    perspective: 300rem;
+
+}
+.head h1{
+    font-size: 3rem;
+    margin-bottom: 70px;
+    text-decoration: underline;
+    color:rgb(237, 234, 240);
+    transform-style: preserve-3d;
+    transform: rotateX(10deg) rotateY(-15deg);
+    -webkit-transform: rotateX(10deg) rotateY(-15deg);
+    -moz-transform: rotateX(10deg) rotateY(-15deg);
+    -ms-transform: rotateX(10deg) rotateY(-15deg);
+    -o-transform: rotateX(10deg) rotateY(-15deg);
+    transition: all 300ms ease-in-out;
+    animation-name: topdown;
+    animation-duration: 1s;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+@keyframes topdown {
+    0%{
+        transform: translateY(-120px);
+        -webkit-transform: translateY(-120px);
+        -moz-transform: translateY(-120px);
+        -ms-transform: translateY(-120px);
+        -o-transform: translateY(-120px);
+}
+    
+}
+.head .task{
+    margin:0;
+    /*border:1px solid red;
+    */background-color: white;
+    border-radius:10px;
+    width:799px;
+    display: flex;
+    flex-wrap:nowrap;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    animation-name: fade;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+}
+@keyframes fade {
+    0%{
+        opacity:0;
+    }
+    60%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.head .task .todo{
+width:584px;
+height:50px;
+margin:0;
+border:0;
+font-size:1.2rem;
+outline: none;
+border-radius:10px;
+
+}
+.head .task #date{
+    margin:0 auto;
+    height:50px;
+    padding-left: 5px;
+    border-left: 1px solid rgba(0,0,0,.2);
+    color:black;
+    font-weight: 700;
+
+}
+.head .task .add{
+    margin:0;
+    height:50px;
+    width:115px;
+    background-color:cyan;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 400ms ease-in-out;
+    -webkit-transition: all 400ms ease-in-out;
+    -moz-transition: all 400ms ease-in-out;
+    -ms-transition: all 400ms ease-in-out;
+    -o-transition: all 400ms ease-in-out;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.head .task .add:hover{
+    box-shadow: inset 0 0 0 100px black;
+    color:white;
+}
+
+.list{
+    background-color: aliceblue;
+    position: absolute;
+    left:10px;
+    width:1000px;
+    right:10px;
+    height: fit-content;
+    padding:50px;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,.5);
+    margin: 0 auto;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    animation: fade 1s ease-in-out;
+    animation-fill-mode: backwards;
+    -webkit-animation: fade 1s ease-in-out;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+.pending{
+    width:100%;
+    height:fit-content;
+    margin-top: 10px;
+    color: black;
+}
+
+.pending .checkbox:not(:checked){
+    cursor:pointer;
+    width:25px;
+    height:25px;
+    margin: 0 auto;
+    display: inline-block;
+    
+
+}
+.pending .work{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-weight: bolder;
+    margin: 0 auto;
+    
+}
+.pending .finishdate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   border: 1px solid black;
+    font-size:1.2rem;
+    width: fit-content;
+    padding: 3px 30px ;
+    color:black;
+    margin: 0 auto;
+
+}
+.line{
+    width:100%;
+    border:1px solid rgba(0,0,0,.3);
+    margin:20px 0 20px 0;
+}
+.heading{
+    width:100%;
+    margin:20px 0 30px 0;    
+
+}
+.heading p{
+    border:1px solid black;
+    padding:10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.btns{
+    width:50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+}
+.reset,.delete{
+    margin: 20px;
+    width: 100px;
+    height:30px;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    border: 0;
+}
+.delete{
+    width:130px;
+    height:40px;
+}
+.reset:hover,.delete:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
