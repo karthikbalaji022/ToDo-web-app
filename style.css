@@ -11,7 +11,7 @@ body{
     color:white;
     position: relative;
     overflow-x: hidden;
-    background-image: url('../img/img1.jpg');
+    background-image: url('img1.jpg');
     background-repeat: none;
     background-size: cover;
     filter:drop-shadow(20);
